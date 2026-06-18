@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🎓 Student Result Management System</h1>
+        <p>Add subjects, enter marks, calculate grades, and manage results</p>
+    </div>
+
+    <div class="input-card">
+
+        <div class="section-title">
+            <h3>Student Information</h3>
+        </div>
+
+        <input type="text" id="name" placeholder="Student Name">
+
+        <div class="section-title">
+            <h3>Subjects & Marks (Minimum 4 Subjects)</h3>
+        </div>
+
+        <div id="subjectsContainer">
+
+            <div class="subject-row">
+                <input type="text" class="subject-name" placeholder="Subject Name">
+                <input type="number" class="subject-mark" placeholder="Marks Obtained">
+                <input type="number" class="subject-max" placeholder="Out Of">
+            </div>
+
+            <div class="subject-row">
+                <input type="text" class="subject-name" placeholder="Subject Name">
+                <input type="number" class="subject-mark" placeholder="Marks Obtained">
+                <input type="number" class="subject-max" placeholder="Out Of">
+            </div>
+
+            <div class="subject-row">
+                <input type="text" class="subject-name" placeholder="Subject Name">
+                <input type="number" class="subject-mark" placeholder="Marks Obtained">
+                <input type="number" class="subject-max" placeholder="Out Of">
+            </div>
+
+            <div class="subject-row">
+                <input type="text" class="subject-name" placeholder="Subject Name">
+                <input type="number" class="subject-mark" placeholder="Marks Obtained">
+                <input type="number" class="subject-max" placeholder="Out Of">
+            </div>
+
+        </div>
+
+        <button class="add-subject-btn" onclick="addSubject()">
+            + Add Subject
+        </button>
+
+        <button class="calculate-btn" onclick="addResult()">
+            Calculate Result
+        </button>
+
+    </div>
+
+    <div class="table-section">
+        <h2>📋 Student Results</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Subjects</th>
+                        <th>Total</th>
+                        <th>Percentage</th>
+                        <th>Grade</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="resultTable"></tbody>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
